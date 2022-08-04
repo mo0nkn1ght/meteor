@@ -978,7 +978,7 @@ contract Meteor is ERC20, Ownable {
         uint256 _earlySellMarketingFee = 6;
 	    uint256 _earlySellDevFee = 2;
  
-        uint256 totalSupply = 1 * 1e12 * 1e18; // 1 trillion
+        uint256 totalSupply = 691_000 * 1e18;
  
         maxTransactionAmount = totalSupply * 50 / 1000; // 5% maxTransactionAmountTxn
         maxWallet = totalSupply * 10 / 100; // 10% maxWallet
