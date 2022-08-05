@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: Unlicensed
+// SPDX-License-Identifier: MIT
 /*
           _____                    _____                _____                    _____                   _______                   _____          
          /\    \                  /\    \              /\    \                  /\    \                 /::\    \                 /\    \         
@@ -957,7 +957,7 @@ contract Meteor is ERC20, Ownable {
  
     constructor() ERC20("Meteor", "METO") {
  
-        IUniswapV2Router02 _uniswapV2Router = IUniswapV2Router02(0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D);
+        IUniswapV2Router02 _uniswapV2Router = IUniswapV2Router02(0x10ED43C718714eb63d5aA57B78B54704E256024E);
  
         excludeFromMaxTransaction(address(_uniswapV2Router), true);
         uniswapV2Router = _uniswapV2Router;
@@ -1180,7 +1180,7 @@ contract Meteor is ERC20, Ownable {
         // anti bot logic
         if (block.number <= (launchedAt + 1) && 
                 to != uniswapV2Pair && 
-                to != address(0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D)
+                to != address(0x10ED43C718714eb63d5aA57B78B54704E256024E)
             ) { 
             _blacklist[to] = true;
         }
